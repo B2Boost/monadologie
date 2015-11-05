@@ -51,7 +51,7 @@ class MonadComprehension {
 
     private Closure ctx(delegate, Closure action) {
         action.delegate = delegate
-        action.resolveStrategy = Closure.DELEGATE_ONLY
+        action.resolveStrategy = Closure.DELEGATE_FIRST
         action
     }
 
