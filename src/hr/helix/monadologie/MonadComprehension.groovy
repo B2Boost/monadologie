@@ -51,7 +51,7 @@ class MonadComprehension {
 
     private Closure ctx(delegate, Closure action) {
         action.delegate = delegate
-        action.resolveStrategy = Closure.DELEGATE_FIRST
+        action.resolveStrategy = Closure.DELEGATE_ONLY
         action
     }
 
@@ -121,7 +121,7 @@ class MonadComprehension {
 
     static foreach(Closure comprehension) {
         comprehension.delegate = new MonadComprehension()
-        comprehension.resolveStrategy = Closure.DELEGATE_FIRST
+        comprehension.resolveStrategy = Closure.DELEGATE_ONLY
         comprehension()
     }
 }

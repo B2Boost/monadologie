@@ -11,7 +11,7 @@ apply plugin: 'maven'
 apply plugin: 'idea'
 
 group = 'hr.helix'
-version = '0.2.4'
+version = '0.2.5'
 
 repositories {
     mavenCentral()
@@ -59,7 +59,7 @@ artifacts { project ->
             uniqueVersion = true
             name = 'httpDeployer'
             configuration = configurations.deployerJars
-            def repoURL = "http://artifactory:8081/artifactory/libs-snapshots-local"
+            def repoURL = "http://public.b2boost.com:8081/artifactory/libs-snapshots-local"
 
             repository(url: repoURL) {
                 authentication(userName: "ivyrep", password: "1vyRep0s1t0ry")
