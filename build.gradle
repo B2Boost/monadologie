@@ -59,7 +59,7 @@ artifacts { project ->
             uniqueVersion = true
             name = 'httpDeployer'
             configuration = configurations.deployerJars
-            def repoURL = "http://public.b2boost.com:8081/artifactory/libs-snapshots-local"
+            def repoURL = "http://public.b2boost.com:8081/artifactory/libs-releases-local"
 
             repository(url: repoURL) {
                 authentication(userName: "ivyrep", password: "1vyRep0s1t0ry")
